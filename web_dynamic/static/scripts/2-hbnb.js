@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
       $('.amenities h4').text(namesNice);
     }
   });
-});
-$.get('http://0.0.0.0:5001/api/v1/status/', function (data, status) {
-    if (status === 'success') {
-	$.('#api_status').addClass('available');
-    } else {
-	$.('#api_status').removeClass('available');
-    }
+    $.get('http://192.168.33.10:5001/api/v1/status/', function (data, status) {
+	if (status === 'success') {
+	    $('#api_status').addClass('available');
+	} else {
+	    $('#api_status').removeClass('available');
+	}
+    });
 });
